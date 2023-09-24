@@ -310,11 +310,11 @@ Windows-arm64_CXXFLAGS  := -Ilib/inc_mac -I$(JAVA_HOME)/include -O2 -fPIC -mmaco
 Windows-arm64_LINKFLAGS := -dynamiclib
 Windows-arm64_LIBNAME   := libsnappyjava.dylib
 
-Windows-armv7_CXX       := c++ -arch armv7
-Windows-armv7_STRIP     := strip -x
-Windows-armv7_CXXFLAGS  := -Ilib/inc_mac -I$(JAVA_HOME)/include -O2 -fPIC -mmacosx-version-min=10.7 -fvisibility=hidden -stdlib=libc++ -std=c++11
-Windows-armv7_LINKFLAGS := -dynamiclib
-Windows-armv7_LIBNAME   := libsnappyjava.dylib
+Windows-armv7_CXX       := $(CROSS_PREFIX)g++
+Windows-armv7_STRIP     := $(CROSS_PREFIX)strip
+Windows-armv7_CXXFLAGS  := -Ilib/inc_win -O2 -std=c++11
+Windows-armv7_LINKFLAGS := -Wl,--kill-at -shared -static
+Windows-armv7_LIBNAME   := snappyjava.dll
 
 CXX        := $($(os_arch)_CXX)
 STRIP     := $($(os_arch)_STRIP)
