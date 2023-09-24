@@ -316,7 +316,6 @@ Windows-armv7_CXXFLAGS  := -Ilib/inc_mac -I$(JAVA_HOME)/include -O2 -fPIC -mmaco
 Windows-armv7_LINKFLAGS := -dynamiclib
 Windows-armv7_LIBNAME   := libsnappyjava.dylib
 
-
 CXX        := $($(os_arch)_CXX)
 STRIP     := $($(os_arch)_STRIP)
 CXXFLAGS    := $($(os_arch)_CXXFLAGS)
