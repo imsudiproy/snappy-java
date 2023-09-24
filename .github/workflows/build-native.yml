@@ -33,7 +33,7 @@ jobs:
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v1.13
         with:
-          cmake-version: '3.27.6'
+          cmake-version: '3.16.x'
       - name: Build native libraries
         run: make clean-native native-all
         env:
