@@ -48,6 +48,7 @@ public class OSInfo {
     public static final String IBMZ_64 = "s390x";
     public static final String AARCH_64 = "aarch64";
     public static final String RISCV_64 = "riscv64";
+    public static final String ARMV7 = "armv7";
 
     static {
         // x86 mappings
@@ -94,6 +95,9 @@ public class OSInfo {
 
         // Aarch64 mappings
         archMapping.put(AARCH_64, AARCH_64);
+
+        //Armv7 mappings
+        archMapping.put(ARMV7, ARMV7);
 
         // RISC-V mappings
         archMapping.put(RISCV_64, RISCV_64);
