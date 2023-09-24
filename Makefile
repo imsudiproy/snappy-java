@@ -204,7 +204,7 @@ freebsd64:
 
 # For ARM
 # native-arm: linux-arm64 linux-android-arm linux-android-aarch64 linux-arm linux-armv6 linux-armv7 win-arm64 win-armv7
-native-arm: win-arm64 win-armv7
+native-arm: win-arm64
 
 
 # TODO: CROSS_PREFIX can be replaced with ${CROSS_ROOT}/bin/${CROSS_TRIPLE}- in Makefile.common
