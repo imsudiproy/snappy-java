@@ -243,7 +243,7 @@ win-arm64: jni-header
 	./docker/dockcross-windows-arm64 -a $(DOCKER_RUN_OPTS) bash -c 'make clean-native native CROSS_PREFIX=/usr/xcc/aarch64-w64-mingw32-cross/bin/aarch64-w64-mingw32- OS_NAME=Windows OS_ARCH=arm64'
 
 win-armv7: jni-header
-	chmod +x ./docker/dockcross-windows-arm64
+	chmod +x ./docker/dockcross-windows-armv7
 	./docker/dockcross-windows-armv7 -a $(DOCKER_RUN_OPTS) bash -c 'make clean-native native CROSS_PREFIX=/usr/xcc/aarch64-w64-mingw32-cross/bin/aarch64-w64-mingw32- OS_NAME=Windows OS_ARCH=armv7'
 
 javadoc:
