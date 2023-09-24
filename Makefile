@@ -151,8 +151,7 @@ native: jni-header snappy-header $(NATIVE_DLL)
 native-nocmake: jni-header $(NATIVE_DLL)
 snappy: native $(TARGET)/$(snappy-jar-version).jar
 
-# native-all: native native-arm clean-docker mac64 win32 win64 linux32 linux64 linux-ppc64le linux-riscv64 linux-s390x windows-arm64
-native-all: native native-arm
+native-all: native native-arm clean-docker mac64 win32 win64 linux32 linux64 linux-ppc64le linux-riscv64 linux-s390x
 ifdef CI
 # Clean docker images within CI to avoid no space left error
 DOCKER_POST_PROCESS:=docker system prune --all --force --volumes
@@ -203,8 +202,7 @@ freebsd64:
 	$(MAKE) native OS_NAME=FreeBSD OS_ARCH=x86_64
 
 # For ARM
-# native-arm: linux-arm64 linux-android-arm linux-android-aarch64 linux-arm linux-armv6 linux-armv7 windows-arm64
-native-arm: windows-arm64
+native-arm: linux-arm64 linux-android-arm linux-android-aarch64 linux-arm linux-armv6 linux-armv7 windows-arm64
 
 
 # TODO: CROSS_PREFIX can be replaced with ${CROSS_ROOT}/bin/${CROSS_TRIPLE}- in Makefile.common
